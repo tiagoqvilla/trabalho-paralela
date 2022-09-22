@@ -1,5 +1,5 @@
 // bubble_sort.c (Roland Teodorowitsch; 15 set. 2022)
-
+// ref https://gist.github.com/vnkdj5/bbcbd4e55be914ffa71052830e72ce19
 #include <stdio.h>
 #include <omp.h>
 
