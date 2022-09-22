@@ -1,0 +1,34 @@
+#!/bin/bash
+
+#SBATCH --export=ALL
+#SBATCH -N 1
+
+##SBATCH -n 16
+
+# tempo
+#SBATCH -t 5
+
+#SBATCH --exclusive
+#SBATCH --no-requeue
+
+#SBATCH -o %x.%j.out
+
+#SBATCH -D /home/pp03025/openmp
+
+echo ################
+echo Running on host `hostname`
+echo
+echo Initial Time is `date`
+echo
+echo Directory is `pwd`
+echo
+echo This jobs runs on the following nodes:
+echo $SLURM_JOB_NODELIST
+echo
+echo JOB_ID:
+echo $SLURM_JOBID
+echo ################
+
+./bubblesort > bubblesort.output
+
+echo Final Time is `date`
