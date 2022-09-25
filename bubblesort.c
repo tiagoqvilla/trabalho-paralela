@@ -3,9 +3,9 @@
 #include <stdio.h>
 #include <omp.h>
 
-#define MAX_ARRAY_SIZE 100000
-#define INI_ARRAY_SIZE 10000
-#define INC_ARRAY_SIZE 10000
+#define MAX_ARRAY_SIZE 25000
+#define INI_ARRAY_SIZE 2500
+#define INC_ARRAY_SIZE 2500
 #define NUM_ARRAYS 25
 
 // ESTRUTURA DE DADOS COMPARTILHADA
@@ -45,7 +45,8 @@ int main() {
       }
 
       // REALIZA A ORDENACAO
-      tempo = -omp_get_wtime(); 
+      tempo = -omp_get_wtime();
+      omp_set_num_threads(2);
       #pragma omp parallel for
       for (i=0 ; i<NUM_ARRAYS; i++) {
           BubbleSort(array_size, &arrays[i][0]);

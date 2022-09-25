@@ -13,7 +13,7 @@
 
 #SBATCH -o %x.%j.out
 
-#SBATCH -D /home/pp03025/openmp
+#SBATCH -D /home/pp03025/openmp/trabalho-paralela
 
 echo ################
 echo Running on host `hostname`
@@ -29,6 +29,6 @@ echo JOB_ID:
 echo $SLURM_JOBID
 echo ################
 
-./bubblesort > bubblesort.output
+./bubblesort_array25_2threads > bubblesort_array25_2threads_3.output
 
 echo Final Time is `date`
