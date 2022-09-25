@@ -46,7 +46,7 @@ int main() {
 
       // REALIZA A ORDENACAO
       tempo = -omp_get_wtime();
-      omp_set_num_threads(16);
+      omp_set_num_threads(8);
       #pragma omp parallel for
       for (i=0 ; i<NUM_ARRAYS; i++) {
           BubbleSort(array_size, &arrays[i][0]);
