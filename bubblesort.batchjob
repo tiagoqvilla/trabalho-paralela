@@ -29,6 +29,6 @@ echo JOB_ID:
 echo $SLURM_JOBID
 echo ################
 
-./bubblesort_array25_16threads > bubblesort_array25_16threads_3.output
+./bubblesort_array150_16threads > bubblesort_array150_16threads_3.output
 
 echo Final Time is `date`
