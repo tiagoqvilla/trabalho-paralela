@@ -1,0 +1,14 @@
+
+Running on host grad01
+
+Initial Time is Sat 24 Sep 2022 11:47:36 PM -03
+
+Directory is /home/pp03025/openmp/trabalho-paralela
+
+This jobs runs on the following nodes:
+grad01
+
+JOB_ID:
+4517
+
+slurmstepd-grad01: error: *** JOB 4517 ON grad01 CANCELLED AT 2022-09-24T23:52:53 DUE TO TIME LIMIT ***

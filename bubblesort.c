@@ -6,7 +6,7 @@
 #define MAX_ARRAY_SIZE 25000
 #define INI_ARRAY_SIZE 2500
 #define INC_ARRAY_SIZE 2500
-#define NUM_ARRAYS 150
+#define NUM_ARRAYS 500
 
 // ESTRUTURA DE DADOS COMPARTILHADA
 int arrays[NUM_ARRAYS][MAX_ARRAY_SIZE];
@@ -46,7 +46,7 @@ int main() {
 
       // REALIZA A ORDENACAO
       tempo = -omp_get_wtime();
-      omp_set_num_threads(2);
+      omp_set_num_threads(4);
       #pragma omp parallel for
       for (i=0 ; i<NUM_ARRAYS; i++) {
           BubbleSort(array_size, &arrays[i][0]);
