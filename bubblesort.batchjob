@@ -6,7 +6,7 @@
 ##SBATCH -n 16
 
 # tempo
-#SBATCH -t 10
+#SBATCH -t 20
 
 #SBATCH --exclusive
 #SBATCH --no-requeue
@@ -29,6 +29,6 @@ echo JOB_ID:
 echo $SLURM_JOBID
 echo ################
 
-./bubblesort_array500_2threads > bubblesort_array500_2threads_1.output
+./bubblesort_array500_2threads > bubblesort_array500_2threads_3.output
 
 echo Final Time is `date`
